@@ -18,4 +18,4 @@ screens = screens.toLowerCase();
 screens = screens.split(' ');
 console.log(screens);
 
-console.log(fullPrice * (rollback/100));
+console.log(fullPrice * (rollback/100))
