@@ -1,9 +1,9 @@
-let title = 'New project';
+const title = 'New project';
 let screens = 'Простые, Сложные, Интерактивные';
-let screenPrice = 100;
-let rollback = 50;
-let fullPrice = 100;
-let adaptive = true;
+const screenPrice = 100;
+const rollback = 50;
+const fullPrice = 100;
+const adaptive = true;
 
 console.log(typeof title);
 console.log(typeof fullPrice);
@@ -18,4 +18,4 @@ screens = screens.toLowerCase();
 screens = screens.split(' ');
 console.log(screens);
 
-console.log(fullPrice * (rollback/100))
+console.log(fullPrice * (rollback/100));
