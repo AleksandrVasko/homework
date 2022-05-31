@@ -14,8 +14,7 @@ console.log(screens.length);
 console.log('Стоимость верстки экранов' + ' ' + (screenPrice) + ' ' + 'рублей/1,51 долларов/44,37 гривен/9,94 юани.');
 console.log('Стоимость разработки сайта' + ' ' + (fullPrice) + ' ' + 'рублей/1,51 долларов/44,37 гривен/9,94 юани.');
 
-screens = screens.toLowerCase();
-screens = screens.split(' ');
+screens = screens.toLowerCase().split(' ');
 console.log(screens);
 
 console.log(fullPrice * (rollback/100));
