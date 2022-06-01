@@ -1,4 +1,4 @@
-/* const title = 'New project';
+const title = 'New project';
 let screens = 'Простые, Сложные, Интерактивные';
 const screenPrice = 100;
 const rollback = 50;
@@ -18,10 +18,10 @@ screens = screens.toLowerCase().split(' ');
 console.log(screens);
 
 console.log(fullPrice * (rollback/100));
- */
 
 
-let title = prompt("Как называется ваш проект?");
+
+/* let title = prompt("Как называется ваш проект?");
 let screens = prompt("Какие типы экранов нужно разработать?");
 let screenPrice = parseInt(prompt("Сколько будет стоить данная работа?").replace(/[\s.,%]/g, ''));
 let rollback = 15;
@@ -53,4 +53,4 @@ switch (true) {
         break;
     default:
         break;
-}
+} */
