@@ -1,4 +1,4 @@
-const title = 'New project';
+/* const title = 'New project';
 let screens = 'Простые, Сложные, Интерактивные';
 const screenPrice = 100;
 const rollback = 50;
@@ -17,40 +17,50 @@ console.log('Стоимость разработки сайта' + ' ' + (fullPr
 screens = screens.toLowerCase().split(' ');
 console.log(screens);
 
-console.log(fullPrice * (rollback/100));
+console.log(fullPrice * (rollback/100)); */
 
 
+//3
+let title = prompt('Как называется ваш проект?');
 
-/* let title = prompt("Как называется ваш проект?");
-let screens = prompt("Какие типы экранов нужно разработать?");
-let screenPrice = parseInt(prompt("Сколько будет стоить данная работа?").replace(/[\s.,%]/g, ''));
-let rollback = 15;
-let adaptive = confirm("Нужен ли адаптив на сайте?");
+//4
+let screens = prompt('Какие типы экранов нужно разработать?', 'Простые, Сложные, Интерактивные');
+
+//5
+let screenPrice = prompt('Сколько будет стоить данная работа?', '12000');
+
+//6
+let adaptive = confirm('Нужен ли адаптив на сайте?');
+
+//7
 let service1 = prompt('Какой дополнительный тип услуги нужен?');
-let servicePrice1 = parseInt(prompt("Сколько это будет стоить?").replace(/[\s.,%]/g, ''));
+let servicePrice1 = prompt('Сколько это будет стоить?');
 let service2 = prompt('Какой дополнительный тип услуги нужен?');
-let servicePrice2 = parseInt(prompt("Сколько это будет стоить?").replace(/[\s.,%]/g, ''));
+let servicePrice2 = prompt('Сколько это будет стоить?');
 
-
+//8
 let fullPrice = screenPrice + servicePrice1 + servicePrice2;
 
-
+//9
+let rollback = 50;
 let servicePercentPrice = Math.ceil(fullPrice - (fullPrice * (rollback / 100)));
 console.log(servicePercentPrice);
 
+//10
+
 switch (true) {
-    case (fullPrice >= 30000):
-        console.log("Даем скидку в 10 %");
+    case (fullPrice > 30000):
+        console.log('Даем скидку в 10 %');
         break;
-    case (fullPrice >= 15000 && fullPrice < 30000):
-        console.log("Даем скидку в 5 %");
+    case (fullPrice > 15000 && fullPrice <= 30000):
+        console.log('Даем скидку в 5 %');
         break;
-    case (fullPrice > 0 && fullPrice < 15000):
-        console.log("Скидка не предусмотрена");
+    case (fullPrice > 0 && fullPrice <= 15000):
+        console.log('Скидка не предусмотрена');
         break;
     case (fullPrice <= 0):
-        console.log("Что то пошло не так");
+        console.log('Что то пошло не так');
         break;
     default:
         break;
-} */
+}
