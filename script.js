@@ -1,9 +1,10 @@
-/* const title = 'New project';
+//lesson02
+let title = 'New project';
 let screens = 'Простые, Сложные, Интерактивные';
-const screenPrice = 100;
-const rollback = 50;
-const fullPrice = 100;
-const adaptive = true;
+let screenPrice = 100;
+let rollback = 50;
+let fullPrice = 100;
+let adaptive = true;
 
 console.log(typeof title);
 console.log(typeof fullPrice);
@@ -17,32 +18,32 @@ console.log('Стоимость разработки сайта' + ' ' + (fullPr
 screens = screens.toLowerCase().split(' ');
 console.log(screens);
 
-console.log(fullPrice * (rollback/100)); */
+console.log(fullPrice * (rollback/100));
 
 
 //3
-let title = prompt('Как называется ваш проект?');
+title = prompt('Как называется ваш проект?');
 
 //4
-let screens = prompt('Какие типы экранов нужно разработать?', 'Простые, Сложные, Интерактивные');
+screens = prompt('Какие типы экранов нужно разработать?', 'Простые, Сложные, Интерактивные');
 
 //5
-let screenPrice = prompt('Сколько будет стоить данная работа?', '12000');
+screenPrice = prompt('Сколько будет стоить данная работа?', '12000');
 
 //6
-let adaptive = confirm('Нужен ли адаптив на сайте?');
+adaptive = confirm('Нужен ли адаптив на сайте?');
 
 //7
-let service1 = prompt('Какой дополнительный тип услуги нужен?');
-let servicePrice1 = prompt('Сколько это будет стоить?');
-let service2 = prompt('Какой дополнительный тип услуги нужен?');
-let servicePrice2 = prompt('Сколько это будет стоить?');
+const service1 = prompt('Какой дополнительный тип услуги нужен?');
+const servicePrice1 = prompt('Сколько это будет стоить?');
+const service2 = prompt('Какой дополнительный тип услуги нужен?');
+const servicePrice2 = prompt('Сколько это будет стоить?');
 
 //8
-let fullPrice = screenPrice + servicePrice1 + servicePrice2;
+fullPrice = screenPrice + servicePrice1 + servicePrice2;
 
 //9
-let rollback = 50;
+rollback = 50;
 let servicePercentPrice = Math.ceil(fullPrice - (fullPrice * (rollback / 100)));
 console.log(servicePercentPrice);
 
