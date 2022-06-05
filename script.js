@@ -1,17 +1,38 @@
 'use sctrict';
 
-let title = prompt('Как называется ваш проект?' );
-let screens = prompt('Какие типы экранов нужно разработать?');
-const screenPrice = +prompt('Сколько будет стоить данная работа?');
+let title = prompt('Как называется ваш проект?', 'Калькулятор верстки');
+let screens = prompt('Какие типы экранов нужно разработать?', 'Простые, Сложные');
+const screenPrice = +prompt('Сколько будет стоить данная работа?', 15000);
 const adaptive = confirm('Нужен ли адаптив на сайте?');
-const service1 = prompt('Какой дополнительный тип услуги нужен?');
+
+const rollback = 50;
+let allServicePrices;
+let fullPrice;
+let servicePercentPrice;
+
+/* const service1 = prompt('Какой дополнительный тип услуги нужен?');
 const servicePrice1 = +prompt('Сколько это будет стоить?');
 const service2 = prompt('Какой дополнительный тип услуги нужен?');
-const servicePrice2 = +prompt('Сколько это будет стоить?');
-const rollback = 50;
-let fullPrice = 0;
-let servicePercentPrice = fullPrice - (fullPrice * (rollback / 100));
+const servicePrice2 = +prompt('Сколько это будет стоить?'); */
 
+const getAllServicePrices = function () {
+    let sum = 0;
+
+    for (let i = 0; i < 2; i++) {
+        sum += +prompt('Сколько это будет стоить?');
+    }
+    return sum;
+    //return servicePrice1 + servicePrice2;
+};
+const showTypeOf = function (variable) {
+    console.log(variable, typeof variable);
+};
+const getServicePercentPrice = function () {
+    return (fullPrice - (fullPrice * (rollback / 100)));
+};
+const getTitle = function () {
+    return title[0].toUpperCase() + title.slice(1).toLowerCase();
+};
 const getRollbackMessage = function (price) {
     if (price >= 30000) {
         return 'Даем скидку в 10 %';
@@ -23,35 +44,30 @@ const getRollbackMessage = function (price) {
         return 'Что то пошло не так';
     }
 };
-
-const showTypeOf = function (variable) {
-    console.log(variable, typeof variable);
-};
-const getAllServicePrices = function () {
-    return servicePrice1 + servicePrice2;
-};
-const getServicePercentPrice = function () {
-    return (fullPrice - (fullPrice * (rollback / 100)));
-};
-const getTitle = function () {
-    return title[0].toUpperCase() + title.slice(1).toLowerCase();
-};
 function getFullPrice() {
     return screenPrice + allServicePrices;
 }
 
-const allServicePrices = getAllServicePrices();
+allServicePrices = getAllServicePrices();
 fullPrice = getFullPrice();
-title = getTitle();
 servicePercentPrice = getServicePercentPrice();
-
+title = getTitle();
 
 showTypeOf(title);
 showTypeOf(screenPrice);
 showTypeOf(adaptive);
-console.log(screens);
+
+console.log('allServicePrices', allServicePrices);
+
 console.log(getRollbackMessage(fullPrice));
-console.log(getServicePercentPrice);
+console.log(typeof title);
+console.log(typeof screenPrice);
+console.log(typeof adaptive);
+
+console.log(screens.length);
+console.log(servicePercentPrice);
+
+console.log('Стоимость верстки экранов' + screenPrice + 'рубли' && 'Стоимость разработки сайта' + fullPrice + 'рубли');
 
 
 
